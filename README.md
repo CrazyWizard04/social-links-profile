@@ -24,6 +24,8 @@ This is my solution for the [Social links profile challenge on Frontend Mentor](
 
 ### ✨ Features
 
+This component displays a user profile card featuring a profile image, name, location, and a list of social links. Each button is styled for clarity and accessibility, offering a clean and responsive layout across devices.
+
 ### 🖼️ Preview
 
 ![Preview](./preview.png)
