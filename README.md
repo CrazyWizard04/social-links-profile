@@ -30,8 +30,8 @@ This is my solution for the [Social links profile challenge on Frontend Mentor](
 
 ### 🔗 Links
 
-- 💡 Solution URL: [Frontend Mentor Submission](https://your-solution-url.com)
-- 🌐 Live Site URL: [Live Demo](https://your-live-site-url.com)
+- 💡 Solution URL: [Frontend Mentor Submission](https://www.frontendmentor.io/solutions/social-links-profile-with-css-and-tailwindcss-7-ahmsGStU)
+- 🌐 Live Site URL: [Live Demo](https://thewizard04-social-links.netlify.app)
 
 ---
 
