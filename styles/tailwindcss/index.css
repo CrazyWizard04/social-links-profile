@@ -8,23 +8,15 @@
   --color-grey-800: hsl(0, 0%, 12%);
   --color-grey-900: hsl(0, 0%, 8%);
 
-  --text-paragraph: 14px;
   --font-inter: "Inter", sans-serif;
+  --padding-card: clamp(1.75rem, 2.5vw, 2rem);
 
-  --padding-card: clamp(28px, 2.5vw, 36px);
-  --animate-slide-in: slide-in 0.5s ease-out;
+  --card-container: 23.75rem;
+  --animate-slide-in: slide-in 0.6s ease;
 }
 
 @utility flex-center {
   @apply flex items-center justify-center;
-}
-
-@utility btn-hover {
-  @apply hover:bg-green hover:scale-[1.04] hover:duration-[0.6s];
-}
-
-@utility btn-focus {
-  @apply focus:outline-2 outline-green;
 }
 
 @layer base {
@@ -33,47 +25,53 @@
   }
 
   body {
-    @apply min-h-screen bg-grey-900 flex-center;
+    @apply min-h-screen flex-center px-4 py-12 md:p-0 text-sm font-bold text-white bg-grey-900;
   }
 
-  article {
-    @apply bg-grey-800 max-w-[380px] w-full p-card rounded-xl flex flex-col animate-slide-in;
+  main {
+    @apply max-w-[var(--card-container)] w-full p-card rounded-2xl bg-grey-800 flex flex-col animate-slide-in;
   }
+}
 
+@layer components {
   .profile {
-    @apply flex-center flex-col gap-5;
+    @apply flex-center flex-col gap-6;
   }
 
-  img {
-    @apply rounded-full h-[100px] w-[100px];
+  .avatar {
+    @apply rounded-full h-[90px] w-[90px];
   }
 
-  .profile div {
+  .profile-details {
     @apply flex-center flex-col gap-1;
   }
 
-  h1 {
-    @apply text-white text-2xl font-[600];
+  .name {
+    @apply text-2xl font-semibold;
   }
 
-  span {
-    @apply text-green text-paragraph font-[700];
+  .location {
+    @apply text-green;
   }
 
-  p {
-    @apply text-white text-paragraph;
+  .description {
+    @apply font-normal;
   }
 
   .social-links {
-    @apply flex flex-col gap-4 w-full mt-5;
+    @apply flex flex-col gap-4 mt-5;
   }
 
-  button {
-    @apply bg-grey-700 border-0 rounded-md px-4 py-3 cursor-pointer btn-hover btn-focus;
+  .social-links a {
+    @apply bg-grey-700 text-white text-center decoration-0 rounded-md px-5 py-4 cursor-pointer;
   }
 
-  button a {
-    @apply text-white text-paragraph font-[700] decoration-0 hover:text-grey-900 hover:duration-[0.6s];
+  .social-links a:hover {
+    @apply bg-green text-grey-900 scale-[1.03] duration-[0.6s];
+  }
+
+  .social-links a:focus-visible {
+    @apply outline-2 outline-offset-2 outline-green;
   }
 }
 

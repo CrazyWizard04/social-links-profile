@@ -24,14 +24,16 @@ This is my solution for the [Social links profile challenge on Frontend Mentor](
 
 ### ✨ Features
 
+This component displays a user profile card featuring a profile image, name, location, and a list of social links. Each button is styled for clarity and accessibility, offering a clean and responsive layout across devices.
+
 ### 🖼️ Preview
 
 ![Preview](./preview.png)
 
 ### 🔗 Links
 
-- 💡 Solution URL: [Frontend Mentor Submission](https://your-solution-url.com)
-- 🌐 Live Site URL: [Live Demo](https://your-live-site-url.com)
+- 💡 Solution URL: [Frontend Mentor Submission](https://www.frontendmentor.io/solutions/social-links-profile-with-css-and-tailwindcss-7-ahmsGStU)
+- 🌐 Live Site URL: [Live Demo](https://thewizard04-social-links.vercel.app)
 
 ---
 
@@ -51,19 +53,16 @@ This is my solution for the [Social links profile challenge on Frontend Mentor](
 - Explored creating animations to enhance the user experience
 - Enhanced accessibility by ensuring the page can be easily navigated using only the keyboard
 
-Here is a snippet which shows the tabindex:
+Here is a snippet which shows the focus state logic:
 
-```html
-<div class="social-links">
-  <button><a href="#" tabindex="-1">GitHub</a></button>
-  <button><a href="#" tabindex="-1">Frontend Mentor</a></button>
-  <button><a href="#" tabindex="-1">LinkedIn</a></button>
-  <button><a href="#" tabindex="-1">Twitter</a></button>
-  <button><a href="#" tabindex="-1">Instagram</a></button>
-</div>
+```css
+.social-links a:focus-visible {
+  outline: 2px solid var(--color-green);
+  outline-offset: 0.25rem;
+}
 ```
 
-The button is focusable via the Tab key, and tabindex ensures the focus stays on the button rather focusing only the a tag.
+The <a>-Tag is focusable via the Tab key, and the :focus-within style shows the border when a button is focused.
 
 ---
 
@@ -88,7 +87,6 @@ Then open your index.html file in the browser.
 
 - [HTML Semantic Elements](https://www.w3schools.com/html/html5_semantic_elements.asp) - A helpful article explaining semantic HTML5 elements and their purpose.
 - [CSS Animations](https://www.w3schools.com/css/css3_animations.asp) - A clear introduction to CSS animations and keyframes.
-- [HTML tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) - Explains how to manage element focus order and improve keyboard accessibility.
 
 ---
 
